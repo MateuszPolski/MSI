@@ -116,3 +116,9 @@ for data_id, dataset in enumerate(datasets):
         (names_column, significance), axis=1), headers)
     print("Zależności statystyczne (alpha = 0.05):\n", significance_table)
 
+
+    stat_better = significance * advantage
+    stat_better_table = tabulate(np.concatenate(
+        (names_column, stat_better), axis=1), headers)
+    print("Zależności statystyczne lepsze:\n", stat_better_table)
+
